@@ -1,9 +1,8 @@
-import Image from "next/image";
 
-export default function Home() {
+export default function ContactPage() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen">
-      <p>Hello</p>
+      <p>ContactPage</p>
     </div>
   );
 }
