@@ -88,9 +88,9 @@ export default function RootLayout({
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <main className="w-full flex flex-col items-center">
-          {children}
-        </main>
+       
+        {children}
+
       </body>
     </html>
   );
