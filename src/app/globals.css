@@ -112,10 +112,29 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.hide-nav-button-bg {
+  background-color: transparent !important;
+}
+
+.hide-nav-button-bg-bg:hover,
+.hide-nav-button-bg-bg:focus,
+.hide-nav-button-bg-bg[data-state='open'] {
+  background-color: transparent !important;
+}
+
+
+@theme {
+  --color-periwinkle: oklch(78.6% 0.075 286.8);
+  --color-seagreen: oklch(73.6% 0.116 179.4);
+  --color-skyblue: oklch(82.7% 0.095 228.1);
+  --color-cream: oklch(98.8% 0.013 94.4);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
