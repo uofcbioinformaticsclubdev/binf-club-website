@@ -58,6 +58,9 @@ function navbar() {
                                     <NavigationMenuLink asChild>
                                         <Link href="/learn/blog">Blog</Link>
                                     </NavigationMenuLink>
+                                    <NavigationMenuLink asChild>
+                                        <Link href="/learn/workshops">Workshops</Link>
+                                    </NavigationMenuLink>
                                 </li>
                             </ul>
                         </NavigationMenuContent>
