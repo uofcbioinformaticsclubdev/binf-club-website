@@ -86,7 +86,7 @@ function navbar() {
 
 
             {/* Contact */}
-            <Link href="/contact" className="font-medium text-white px-4 py-0.5 bg-[#22AAA1]/50 rounded-md">
+            <Link href="/contact" className="font-medium text-white px-4 py-0.5 bg-gradient-to-r from-teal-400 to-seagreen rounded-md">
                 Contact
             </Link>
 

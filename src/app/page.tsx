@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import drawing from "./../../public/drawing.png"
+
 
 export default function Home() {
   return (
@@ -49,44 +52,154 @@ export default function Home() {
 
           {/* Content Grid */}
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition duration-300">
-              <div className="text-periwinkle font-bold text-xl mb-3">🤝 Networking</div>
-              <p className="text-gray-700">
+
+            {/* Networking */}
+            <div className="group relative bg-white rounded-2xl shadow-purple-50 shadow-2xl p-8 overflow-hidden">
+
+              {/* Blurred circle */}
+              <div className="absolute -top-6 -left-6 size-44 bg-periwinkle/20 blur-2xl rounded-full 
+                  transition-all duration-300 group-hover:size-72"></div>
+
+              <div className="relative text-periwinkle font-bold text-xl mb-3">🤝 Networking</div>
+              <p className="relative text-gray-700">
                 Connect with peers, researchers, and professionals shaping the future
                 of bioinformatics.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition duration-300">
-              <div className="text-skyblue font-bold text-xl mb-3">🧠 Skill-Building</div>
-              <p className="text-gray-700">
+            {/* Skill Building */}
+            <div className="group relative bg-white rounded-2xl shadow-sky-50 shadow-2xl p-8 overflow-hidden">
+
+              {/* Blurred circle */}
+              <div className="absolute -top-6 -left-6 size-44 bg-skyblue/20 blur-2xl rounded-full
+                  transition-all duration-300 group-hover:size-72"></div>
+
+              <div className="relative text-skyblue font-bold text-xl mb-3">🧠 Skill-Building</div>
+              <p className="relative text-gray-700">
                 Participate in labs and workshops designed to make
                 bioinformatics tools accessible and exciting.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition duration-300">
-              <div className="text-seagreen font-bold text-xl mb-3">🌱 Career Growth</div>
-              <p className="text-gray-700">
+            {/* Career Growth */}
+            <div className="group relative bg-white rounded-2xl shadow-emerald-50 shadow-2xl p-8 overflow-hidden">
+
+              {/* Blurred circle */}
+              <div className="absolute -top-6 -left-6 size-44 bg-seagreen/15 blur-2xl rounded-full
+                  transition-all duration-300 group-hover:size-72"></div>
+
+              <div className="relative text-seagreen font-bold text-xl mb-3">🌱 Career Growth</div>
+              <p className="relative text-gray-700">
                 Discover unique career paths that blend programming, biology, and
                 problem-solving — from healthcare to agriculture and beyond.
               </p>
             </div>
+
+
           </div>
 
-          {/* Call to Action */}
+          {/* Check Out Our Events */}
           <div className="mt-16 text-center">
-            <button className="px-8 py-4 bg-seagreen text-white font-semibold rounded-xl shadow hover:bg-indigo-700 transition">
+            <Link href="/previous-events" className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-400 to-seagreen">
               Check Out Our Events
-            </button>
+            </Link>
+
           </div>
+        </div>
+      </section >
+
+      {/* Section divider */}
+      {/* <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-28 bg-neutral-50">
+        <path d="M0,60 C200,20 400,100 600,60 C800,20 1000,100 1200,60"
+          className="stroke-current text-seagreen/70"
+          fill="none" stroke-width="4" stroke-dasharray="2 12" opacity="0.6" />
+        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60"
+          className="stroke-current text-sky-400"
+          fill="none" stroke-width="4" stroke-dasharray="2 12" opacity="0.6" />
+      </svg> */}
+
+      <section className="w-full flex justify-center items-center relative py-72 px-8">
+        <div className="absolute inset-0 bg-neutral-50 -z-10">
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 1440 700"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="oklch(73.6% 0.116 179.4)"
+              d="
+                M0,120
+                C180,180 360,80 540,140
+                C720,200 900,100 1000,140
+                C1260,220 1350,140 1440,120 
+                L1440,600
+                C1260,700 1080,500 900,560
+                C720,620 540,520 360,580
+                C180,640 90,560 0,600
+                Z
+              "
+            />
+          </svg>
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-2xl md:text-3xl font-semibold text-white leading-relaxed">
+            “Our goal is to make bioinformatics accessible. We dream of science that is interdisciplinary and open”
+          </p>
+        </div>
+      </section>
+
+
+
+      {/* Section: What is Bioinformatics? */}
+      <section className="relative w-full pt-0 py-32 px-8 bg-white">
+
+        {/* Subtle Background Fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-seagreen/5 to-transparent pointer-events-none"></div>
+
+        <div className="max-w-4xl mx-auto text-center relative">
+
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900">
+            What is Bioinformatics?
+          </h2>
+
+          {/* Divider */}
+          <div className="flex justify-center pb-5 pt-5 opacity-70">
+            <svg width="160" height="40" viewBox="0 0 200 40">
+              <path d="M0,20 C40,0 60,40 100,20 C140,0 160,40 200,20"
+                stroke="oklch(78.6% 0.075 286.8)" strokeWidth="4" fill="none" />
+            </svg>
+          </div>
+
+
+
+          <p className="text-lg text-gray-700 mt-6 leading-relaxed">
+            Living things carry their blueprint in molecules like DNA that dictate their characteristics and survival.
+            Bioinformatics is the science of decoding that information using computers.
+            It’s the bridge between biology and informatics.
+          </p>
+
+
+          <div className="w-full pt-5 flex justify-center items-center">
+            <Image
+              src={drawing}
+              alt="Bioinformatics sketch"
+              className="max-w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/2"
+            />
+          </div>
+
         </div>
       </section>
 
 
 
 
-        {/* <svg
+
+
+
+
+      {/* <svg
           className="relative block w-full bg-gradient-to-b from-neutral-50 to-white h-24"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
@@ -114,7 +227,7 @@ export default function Home() {
 
 
 
-<svg
+      {/* <svg
   className="w-full bg-gradient-to-b from-neutral-50 to-white h-48"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 320"
@@ -146,25 +259,10 @@ export default function Home() {
   <line x1="1140" y1="160" x2="1140" y2="180" stroke="oklch(85% 0 0)" strokeWidth="4" />
   <line x1="1260" y1="160" x2="1260" y2="180" stroke="oklch(85% 0 0)" strokeWidth="4" />
   <line x1="1380" y1="160" x2="1380" y2="180" stroke="oklch(85% 0 0)" strokeWidth="4" />
-</svg>
+</svg> */}
 
 
-<section className="bg-white w-full h-screen">
 
-</section>
-
-
-        {/* TRANSITION ELEMENT */}
-        <div className="w-full">
-          <div className="w-full text-4xl break-words whitespace-normal">
-            010101001011010010100101100101010101010010110100101001011001010101010100101101001010010110010101010101001011010010
-            010101001011010010100101100101010101010010110100101001011001010101010100101101001010010110010101010101001011010010
-            010101001011010010100101100101010101010010110100101001011001010101010100101101001010010110010101010101001011010010
-            AGTCAGGCTTAGCGTACGTAGCTAAGTCAGGCTTAGCGTACGTAGCTAAGTCAGGCTTAGCGTACGTAGCTAAGTCAGGCTTAGCGTACGTAGCTAAGTCAGGCTTAGCGTACGT
-
-          </div>
-        </div>
-
-      </>
-      );
+    </>
+  );
 }
