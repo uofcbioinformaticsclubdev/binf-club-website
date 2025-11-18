@@ -9,15 +9,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="relative w-full h-screen min-h-screen font-sans overflow-hidden">
+
         {/* DNA GIF background */}
-        <div className="absolute -bottom-35 -rotate-[55deg] -right-180">
+        <div className="absolute -bottom-[35vh] md:-bottom-[55vh] -rotate-[55deg] -right-180 md:-right-140">
           <Image
             src="/DNA.gif"
             alt="DNA animation"
             width={800}
             height={1400}
             priority
-            style={{ height: "140vh", width: "auto" }}
+            className="hidden md:block h-[200vh] w-auto object-contain"
           />
         </div>
 
