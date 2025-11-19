@@ -10,7 +10,7 @@ export default function ContactPage() {
         <p className="my-8">
           Fill out the form below
         </p>
-        <form action="" className="self-stretch space-y-3">
+        <form action="https://formspree.io/f/xvglqolo" className="self-stretch space-y-3" method="post">
           <div className="">
             <label htmlFor="name" className="text-sm sr-only">Your name</label>
             <input id="name" type="text" placeholder="Your name" className="w-full rounded-md focus:ring border border-primary-300 p-3" />
