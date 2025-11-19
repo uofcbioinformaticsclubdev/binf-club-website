@@ -2,6 +2,7 @@
 // // Coolors : https://coolors.co/b0abd8-22aaa1-84cae7-fffdf1-2d3142 
 "use client";
 
+import { act, useState } from 'react';
 import dynamic from "next/dynamic";
 
 const ParticlesBackground = dynamic(
@@ -13,6 +14,38 @@ import ArticleCard from "@/components/ui/article-card";
 import blogs from "@/data/BlogData";
 
 export default function Blogs() {
+
+    const [activeTabs, setActiveTabs] = useState<string[]>(["all"])
+
+    // Sample tags that could be used for filtering (just for UI purposes)
+    const tabs = ["all", "sequence analysis", "gene expression", "protein structure", "variants"]
+    
+    const handleClick = (tab : string) => {
+
+        // Case 1 : User clicks 'All' tag
+        if(tab === "all") {
+            setActiveTabs(["all"])
+            return
+        }
+
+        // Case 2 : User clicks non-"all" tag
+        let updated : string[] = [];
+
+        if(activeTabs.includes(tab)) {
+            // Case 2a : Remove tab if already clicked
+            updated = activeTabs.filter((t) => t != tab);
+        } else {
+            // Case 2a : Activate the tab when clicked
+            updated = [...activeTabs.filter((t) => t != "all"), tab]
+        }
+
+        if(updated.length == 0 ) {
+            updated = ["all"]
+        }
+
+        setActiveTabs(updated)
+    }
+
     return (
         <div className="relative min-h-screen">
             <div className='flex flex-col justify-center items-center'>
@@ -21,23 +54,44 @@ export default function Blogs() {
                     <div className="mt-10 absolute left-10 bottom-10 text-[#2B2C2C]">
                         <h1 className="text-5xl font-bold pt-5">Blogs</h1>
                         <h2 className="text-2xl font-semi-bold pt-2 w-3/4">
-                            Hear from our members as they share their insights on bioinformatics 
+                            Hear from our members as they share their insights on bioinformatics
                             topics!
                         </h2>
                     </div>
                 </div>
-                <section className="pt-30 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 bg-[#fffdf1]">
-                    {blogs.map((blog, index) => (
-                        <ArticleCard
-                            key={index}
-                            image={blog.image}
-                            author={blog.author}
-                            title={blog.title}
-                            header={blog.header}
-                            date={blog.date}
-                        />
-                    ))}
-                </section>
+                <div className="pt-5 bg-[#fffdf1]">
+                    <div className='py-4 px-10 text-[#2B2C2C] font-semi-bold flex flex-row gap-6 justify-start'>
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab}
+                                onClick={() => handleClick(tab)}
+                                style={{
+                                padding: "8px 16px",
+                                borderRadius: "8px",
+                                border: "none",
+                                cursor: "pointer",
+                                backgroundColor: activeTabs.includes(tab) ? "#22AAA1" : "transparent",
+                                fontWeight: activeTabs.includes(tab) ? "600" : "400",
+                                }}
+                            >
+                                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                            </button>
+                        ))}
+                    </div>
+                    <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+                        {blogs.map((blog, index) => (
+                            <ArticleCard
+                                key={index}
+                                image={blog.image}
+                                author={blog.author}
+                                title={blog.title}
+                                header={blog.header}
+                                date={blog.date}
+                                tags={blog.tags}
+                            />
+                        ))}
+                    </section>
+                </div>
             </div>
         </div>
     )
