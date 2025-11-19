@@ -73,7 +73,7 @@ function footer(){
                 <div className="w-full px-2 lg:w-1/2">
                   <div className="flex flex-wrap lg:justify-end">
                     <a
-                      href="javascript:void(0)"
+                      href="https://docs.google.com/forms/d/e/1FAIpQLScKNy1WfuRtzHNWhcYIzFOWH95ZN71Ms5zIed-C267jyN-vBw/viewform" target="_blank"
                       className="inline-flex py-3 my-1 mr-4 text-base font-medium transition bg-white rounded-md hover:bg-shadow-1 text-seagreen px-7"
                     >
                       Become a Member!
@@ -81,7 +81,7 @@ function footer(){
 
                     <div className="inline-flex gap-5">
                         <a
-                          href="https://instagram.com"
+                          href="https://www.instagram.com/uofc_bioinformatics_club/?hl=en" target="_blank"
                           className="inline-flex p-3 my-1 text-base font-medium text-seagreen transition rounded-md bg-secondary hover:bg-opacity-90"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" fill="var(--color-seagreen)" className="bi bi-instagram size-6" viewBox="0 0 16 16">
@@ -89,7 +89,7 @@ function footer(){
                           </svg>
                         </a>
                         <a
-                          href="https://linkedin.com"
+                          href="https://www.linkedin.com/company/ucalgary-bioinformatics-club" target="_blank"
                           className="inline-flex p-3 my-1 text-base font-medium text-seagreen transition rounded-md bg-secondary hover:bg-opacity-90"
                         >
                           <svg xmlns="http://www.w3.org/2000/svg" fill="var(--color-seagreen)" className="bi bi-linkedin size-6" viewBox="0 0 16 16">
