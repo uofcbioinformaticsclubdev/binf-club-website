@@ -53,9 +53,9 @@ function navbar() {
                                     <NavigationMenuLink asChild>
                                         <Link href="/about">About Bioinformatics Club</Link>
                                     </NavigationMenuLink>
-                                    <NavigationMenuLink asChild>
+                                    {/* <NavigationMenuLink asChild>
                                         <Link href="/about/team">Team</Link>
-                                    </NavigationMenuLink>
+                                    </NavigationMenuLink> */}
                                 </li>
                             </ul>
                         </NavigationMenuContent>
@@ -91,11 +91,11 @@ function navbar() {
                             <ul className="grid w-[250px] gap-4">
                                 <li>
                                     <NavigationMenuLink asChild>
-                                        <Link href="/events/previous-events">Previous Events</Link>
+                                        <Link href="/events/previous-events">Event News</Link>
                                     </NavigationMenuLink>
-                                    <NavigationMenuLink asChild>
+                                    {/* <NavigationMenuLink asChild>
                                         <Link href="/events/gallery">Gallery</Link>
-                                    </NavigationMenuLink>
+                                    </NavigationMenuLink> */}
                                 </li>
                             </ul>
                         </NavigationMenuContent>
