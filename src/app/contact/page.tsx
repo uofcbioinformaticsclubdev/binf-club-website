@@ -13,17 +13,17 @@ export default function ContactPage() {
         <form action="https://formspree.io/f/xvglqolo" className="self-stretch space-y-3" method="post">
           <div className="">
             <label htmlFor="name" className="text-sm sr-only">Your name</label>
-            <input id="name" type="text" placeholder="Your name" className="w-full rounded-md focus:ring border border-primary-300 p-3" />
+            <input id="name" name="name" type="text" placeholder="Your name" className="w-full rounded-md focus:ring border border-primary-300 p-3" />
           </div>
           <div className="">
-            <label htmlFor="lastname" className="text-sm sr-only">Email address</label>
-            <input id="lastname" type="text" placeholder="Email address" className="w-full rounded-md focus:ring border border-primary-300 p-3" />
+            <label htmlFor="email" className="text-sm sr-only">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Email address" className="w-full rounded-md focus:ring border border-primary-300 p-3" />
           </div>
           <div className="">
             <label htmlFor="message" className="text-sm sr-only">Message</label>
-            <textarea  id="message" placeholder="Enter message" className="w-full rounded-md focus:ring border border-primary-300 p-3" rows={5}/>
+            <textarea name="message" id="message" placeholder="Enter message" className="w-full rounded-md focus:ring border border-primary-300 p-3" rows={5}/>
           </div>
-          <button type="button" className="w-full py-2 font-semibold rounded bg-seagreen text-secondary">Submit</button>
+          <button type="submit" className="w-full py-2 font-semibold rounded bg-seagreen text-secondary">Submit</button>
         </form>
       </div>
       <img src="/students.jpg" alt="" className="object-cover w-full rounded-md xl:col-span-3" />
