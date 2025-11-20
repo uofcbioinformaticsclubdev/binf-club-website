@@ -19,10 +19,7 @@ function ParticlesBackground() {
     // using an empty options object will load the default options, which are static particles with no background and 3px radius, opacity 100%, white color
     // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
-      // background: {
-      //   color: "#84CAE7", // this sets a background color for the canvas
-      // },
-      fpsLimit : 60,
+      fpsLimit : 40,
       fullScreen : {
         enable : false,
         zIndex : -1,
@@ -66,7 +63,7 @@ function ParticlesBackground() {
           value: { min: 1, max: 3 }, // let's randomize the particles size a bit
         }, 
         number : {
-          value  : 100,
+          value  : 120,
           density : {
             enable : true,
             area : 800

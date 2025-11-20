@@ -2,7 +2,7 @@
 const blogs = [
     {
         image: {
-            src: "/img/bioinformatics-poster.jpg",
+            src: "/img/bioinformatics-placeholder.jpg",
             alt: "Image of people discussing in a workshop"
         },
         author: "Jane Doe",
@@ -13,7 +13,7 @@ const blogs = [
     },
     {
         image: {
-            src: "/img/bioinformatics-poster.jpg",
+            src: "/img/bioinformatics-placeholder.jpg",
             alt: "Image of people discussing in a workshop"
         },
         author: "Alex Nguyen",
@@ -24,7 +24,7 @@ const blogs = [
     },
     {
         image: {
-            src: "/img/bioinformatics-poster.jpg",
+            src: "/img/bioinformatics-placeholder.jpg",
             alt: "Image of people discussing in a workshop"
         },
         author: "Sofia Patel",
@@ -35,7 +35,7 @@ const blogs = [
     },
     {
         image: {
-            src: "/img/bioinformatics-poster.jpg",
+            src: "/img/bioinformatics-placeholder.jpg",
             alt: "Image of people discussing in a workshop"
         },
         author: "Daniel Kim",
@@ -46,7 +46,7 @@ const blogs = [
     },
     {
         image: {
-            src: "/img/bioinformatics-poster.jpg",
+            src: "/img/bioinformatics-placeholder.jpg",
             alt: "Image of people discussing in a workshop"
         },
         author: "Maya Thompson",
@@ -57,7 +57,7 @@ const blogs = [
     },
     {
         image: {
-            src: "/img/bioinformatics-poster.jpg",
+            src: "/img/bioinformatics-placeholder.jpg",
             alt: "Image of people discussing in a workshop"
         },
         author: "Liam Rodríguez",

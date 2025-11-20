@@ -16,8 +16,8 @@ interface ArticleProps {
 
 export default function ArticleCard({ image, author, title, header, date, tags }: ArticleProps) {
     return (
-        <div className='flex flex-col my-3 mx-5 gap-3 justify-center items-center'>
-            <div className='w-85 h-50 overflow-hidden'>
+        <div className='flex flex-col my-3 mx-5 gap-3 justify-center items-center cursor-pointer'>
+            <div className='w-auto h-50 overflow-hidden'>
                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover rounded-md" />
             </div>
             <div className="py-4 px-6 text-[#2B2C2C]">
@@ -35,7 +35,7 @@ export default function ArticleCard({ image, author, title, header, date, tags }
                     {tags.map((tag, i) => (
                         <div
                             key={i}
-                            className="bg-[#f2f2f2] rounded-full py-2 px-4 border border-gray-200 shadow-sm"
+                            className="bg-[#36C7B5] rounded-full py-2 px-4 border border-gray-200 shadow-sm"
                         >
                             <p className="text-[#2B2C2C] font-semi-bold">{tag.charAt(0).toUpperCase() + tag.slice(1)}</p>
                         </div>

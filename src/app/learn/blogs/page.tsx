@@ -66,14 +66,7 @@ export default function Blogs() {
                             <button
                                 key={tab}
                                 onClick={() => handleClick(tab)}
-                                style={{
-                                    padding: "8px 16px",
-                                    borderRadius: "8px",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    backgroundColor: activeTabs.includes(tab) ? "#22AAA1" : "transparent",
-                                    fontWeight: activeTabs.includes(tab) ? "600" : "400",
-                                }}
+                                className={`px-3 py-2 rounded-full cursor-pointer ${activeTabs.includes(tab) ? "bg-[#36C7B5]" : "hover:bg-[#36C7B5]/20 transparent"}`}
                             >
                                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
                             </button>
