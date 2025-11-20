@@ -19,19 +19,19 @@ export default function Blogs() {
 
     // Sample tags that could be used for filtering (just for UI purposes)
     const tabs = ["all", "sequence analysis", "gene expression", "protein structure", "variants"]
-    
-    const handleClick = (tab : string) => {
+
+    const handleClick = (tab: string) => {
 
         // Case 1 : User clicks 'All' tag
-        if(tab === "all") {
+        if (tab === "all") {
             setActiveTabs(["all"])
             return
         }
 
         // Case 2 : User clicks non-"all" tag
-        let updated : string[] = [];
+        let updated: string[] = [];
 
-        if(activeTabs.includes(tab)) {
+        if (activeTabs.includes(tab)) {
             // Case 2a : Remove tab if already clicked
             updated = activeTabs.filter((t) => t != tab);
         } else {
@@ -39,7 +39,7 @@ export default function Blogs() {
             updated = [...activeTabs.filter((t) => t != "all"), tab]
         }
 
-        if(updated.length == 0 ) {
+        if (updated.length == 0) {
             updated = ["all"]
         }
 
@@ -51,6 +51,7 @@ export default function Blogs() {
             <div className='flex flex-col justify-center items-center'>
                 <div className='relative w-full md:h-130'>
                     <ParticlesBackground />
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-indigo-50 via-[#92cbe3] to-indigo-400 opacity-80 -z-20" />
                     <div className="mt-10 absolute left-10 bottom-10 text-[#2B2C2C]">
                         <h1 className="text-5xl font-bold pt-5">Blogs</h1>
                         <h2 className="text-2xl font-semi-bold pt-2 w-3/4">
@@ -66,12 +67,12 @@ export default function Blogs() {
                                 key={tab}
                                 onClick={() => handleClick(tab)}
                                 style={{
-                                padding: "8px 16px",
-                                borderRadius: "8px",
-                                border: "none",
-                                cursor: "pointer",
-                                backgroundColor: activeTabs.includes(tab) ? "#22AAA1" : "transparent",
-                                fontWeight: activeTabs.includes(tab) ? "600" : "400",
+                                    padding: "8px 16px",
+                                    borderRadius: "8px",
+                                    border: "none",
+                                    cursor: "pointer",
+                                    backgroundColor: activeTabs.includes(tab) ? "#22AAA1" : "transparent",
+                                    fontWeight: activeTabs.includes(tab) ? "600" : "400",
                                 }}
                             >
                                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
