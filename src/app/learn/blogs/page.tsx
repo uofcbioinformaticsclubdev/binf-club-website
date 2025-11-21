@@ -2,7 +2,8 @@
 // // Coolors : https://coolors.co/b0abd8-22aaa1-84cae7-fffdf1-2d3142 
 "use client";
 
-import { act, useState } from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
 import dynamic from "next/dynamic";
 
 const ParticlesBackground = dynamic(
@@ -13,7 +14,7 @@ const ParticlesBackground = dynamic(
 import ArticleCard from "@/components/ui/article-card";
 import blogs from "@/data/BlogData";
 
-export default function Blogs() {
+export default function Blog() {
 
     const [activeTabs, setActiveTabs] = useState<string[]>(["all"])
 
@@ -47,7 +48,7 @@ export default function Blogs() {
     }
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen pt-14">
             <div className='flex flex-col justify-center items-center'>
                 <div className='relative w-full md:h-130'>
                     <ParticlesBackground />
@@ -73,16 +74,19 @@ export default function Blogs() {
                         ))}
                     </div>
                     <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-                        {blogs.map((blog, index) => (
-                            <ArticleCard
-                                key={index}
-                                image={blog.image}
-                                author={blog.author}
-                                title={blog.title}
-                                header={blog.header}
-                                date={blog.date}
-                                tags={blog.tags}
-                            />
+                        {blogs.map((blog) => (
+                            <Link key={blog.id} href={`/learn/blogs/${blog.id}`}>
+                                <ArticleCard
+                                    key={blog.id}
+                                    image={blog.image}
+                                    author={blog.author}
+                                    title={blog.title}
+                                    header={blog.header}
+                                    date={blog.date}
+                                    tags={blog.tags}
+                                />
+                            </Link>
+
                         ))}
                     </section>
                 </div>
