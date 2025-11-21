@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import drawing from "./../../public/drawing.png"
+import InfoCard from "./../components/common/InfoCard"
 
 
 export default function Home() {
@@ -146,7 +147,7 @@ export default function Home() {
 
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-semibold text-white leading-relaxed">
-            “Our goal is to make bioinformatics accessible. We dream of science that is interdisciplinary and open”
+            Our goal is to make bioinformatics accessible. We dream of science that is interdisciplinary and open
           </p>
         </div>
       </section>
@@ -189,8 +190,34 @@ export default function Home() {
               className="max-w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/2"
             />
           </div>
+          
+
 
         </div>
+        {/* Animated card section */}
+        <div className="w-full grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-3 p-32 ">
+            <InfoCard
+              headline="Forensic Genomics" 
+              smallText="CSI" 
+              description="DNA sequencing and database matching for criminal justice — showing how bioinformatics impacts everyday law enforcement and identity verification."
+              image="https://images.unsplash.com/photo-1713950658643-b6882cc08e2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              imageDescription="A crime scene"
+            />
+            <InfoCard
+              headline="Vaccine Development" 
+              smallText="COVID-19 vaccines" 
+              description="Bioinformatics pipelines identify viral proteins and predict immune responses — enabling rapid vaccine design that changed the course of a pandemic."
+              image="https://plus.unsplash.com/premium_photo-1661440247844-f28df59bcc5b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              imageDescription="Covid Shots"
+            />
+            <InfoCard
+              headline="Agrigenomics" 
+              smallText="The cows are getting beefier" 
+              description="Applying bioinformatics to crop and livestock genomes — improving yield, disease resistance, and sustainability in agriculture."
+              image="https://images.unsplash.com/photo-1454179083322-198bb4daae41?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              imageDescription="cows, possibly after mooing"
+            />
+          </div>
       </section>
 
 
