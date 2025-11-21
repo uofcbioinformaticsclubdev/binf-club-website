@@ -8,6 +8,7 @@ import {
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
     NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link"
@@ -86,19 +87,20 @@ function navbar() {
 
                     {/* Events Section */}
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className="hide-nav-button-bg data-[state=open]:text-[#84cae7]">Events</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ul className="grid w-[250px] gap-4">
+                        {/* <NavigationMenuTrigger className="hide-nav-button-bg data-[state=open]:text-[#84cae7]">Events</NavigationMenuTrigger> */}
+                            {/* <ul className="grid w-[250px] gap-4">
                                 <li>
                                     <NavigationMenuLink asChild>
                                         <Link href="/events/previous-events">Event News</Link>
                                     </NavigationMenuLink>
-                                    {/* <NavigationMenuLink asChild>
+                                    <NavigationMenuLink asChild>
                                         <Link href="/events/gallery">Gallery</Link>
-                                    </NavigationMenuLink> */}
+                                    </NavigationMenuLink>
                                 </li>
-                            </ul>
-                        </NavigationMenuContent>
+                            </ul> */}
+                            <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                                <Link href="/events/previous-events">Events</Link>
+                            </NavigationMenuLink>
                     </NavigationMenuItem>
 
 
