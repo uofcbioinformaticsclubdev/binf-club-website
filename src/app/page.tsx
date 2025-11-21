@@ -102,7 +102,7 @@ export default function Home() {
 
           {/* Check Out Our Events */}
           <div className="mt-16 text-center">
-            <Link href="/previous-events" className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-400 to-seagreen">
+            <Link href="/events/previous-events" className="px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-400 to-seagreen">
               Check Out Our Events
             </Link>
 
