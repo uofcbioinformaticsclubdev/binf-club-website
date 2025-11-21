@@ -28,8 +28,8 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative w-full h-full min-h-full flex flex-col justify-center p-10 pt-20 z-10">
-          <p className="text-neutral-800 text-7xl font-extrabold uppercase out">Bioinformatics Club</p>
-          <p className="text-seagreen font-semibold text-3xl ">Where code meets codons</p>
+          <p className="text-neutral-800 text-7xl font-extrabold uppercase out text-wr">Bioinformatics Club</p>
+          <p className="text-seagreen font-semibold text-3xl ">Turning Data Into Discoveries</p>
         </div>
       </div>
 

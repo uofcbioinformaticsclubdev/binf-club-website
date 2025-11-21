@@ -1,4 +1,3 @@
-
 function footer(){
     return <footer className="w-full bg-seagreen h-[45vh]">
           <div className="relative w-full h-full">
@@ -27,8 +26,8 @@ function footer(){
                         y2="-106.425"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="white" stop-opacity="0.07" />
-                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                        <stop stopColor="white" stopOpacity="0.07" />
+                        <stop offset="1" stopColor="white" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -57,8 +56,8 @@ function footer(){
                         y2="88.5747"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="white" stop-opacity="0.07" />
-                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                        <stop stopColor="white" stopOpacity="0.07" />
+                        <stop offset="1" stopColor="white" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -67,7 +66,7 @@ function footer(){
               <div className="flex flex-wrap items-center md:pl-8 justify-center md:w-auto lg:w-[80%] xl:w-[60%]">
                 <div className="w-full px-2 lg:w-1/2">
                   <h2 className="mb-6 text-3xl font-bold text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
-                    <span className="xs:block">Can't get enough of us?</span>
+                    <span className="xs:block">Still peering through the microscope?</span>
                   </h2>
                 </div>
                 <div className="w-full px-2 lg:w-1/2">

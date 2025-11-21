@@ -3,9 +3,20 @@
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import sample from "../../../../public/sample.jpg";
-import sample2 from "../../../../public/sample2.jpg";
-import sample4 from "../../../../public/sample4.jpg";
+
+import biohack1 from "../../../../public/events-page/biohacks/biohack1.jpg";
+import biohack2 from "../../../../public/events-page/biohacks/biohack2.jpg";
+import biohack3 from "../../../../public/events-page/biohacks/biohack3.jpg";
+import biohack4 from "../../../../public/events-page/biohacks/biohack4.jpg";
+import biohack5 from "../../../../public/events-page/biohacks/biohack5.jpg";
+
+import bioaro from "../../../../public/events-page/biohacks/bioaro.png";
+import skorbio from "../../../../public/events-page/biohacks/skorbio.png";
+import aimss from "../../../../public/events-page/biohacks/aimss.png";
+
+import industry1 from "../../../../public/events-page/industry-night/industry-1.jpg";
+import industry2 from "../../../../public/events-page/industry-night/industry-2.jpg";
+import industry3 from "../../../../public/events-page/industry-night/industry-3.jpg";
 
 
 
@@ -16,7 +27,7 @@ export default function PreviousEventsPage() {
       <section className="relative w-full h-[70vh] flex items-center justify-center">
         <div className="relative w-full h-full overflow-hidden">
           <Image
-            src={sample}
+            src={biohack2}
             alt="Hero"
             fill
             className="object-cover"
@@ -34,7 +45,7 @@ export default function PreviousEventsPage() {
 
 
       {/* ----------------- EVENTS SECTION ----------------- */}
-      <SectionWrapper title="Latest Events">
+      <SectionWrapper title="Previous Events">
         <div className="flex flex-col gap-8">
           {events.map((item, index) => (
             <EventCard key={index} event={item} />
@@ -51,6 +62,7 @@ export default function PreviousEventsPage() {
 
 
 /* ----------------- SECTION WRAPPER COMPONENT ----------------- */
+
 function SectionWrapper({
   title,
   children
@@ -59,7 +71,7 @@ function SectionWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <section className=" w-full py-20">
+    <section className=" w-full py-20 pb-0">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-6">{title}</h2>
         {children}
@@ -71,6 +83,9 @@ function SectionWrapper({
 function EventDescription({ event }: { event: typeof events[0] }) {
   return (
     <div className="flex-1 w-full mt-4 md:mt-0">
+      <h2 className="text-2xl font-semibold">{event.title}</h2>
+      <span className="text-sm text-gray-500">{event.date}</span>
+      <p className="text-neutral-600 mb-1">{event.description}</p>
       {/* Sponsor Ribbon */}
       <div className="flex items-center gap-4 mb-2">
         {event.sponsors.map((sponsor, i) => (
@@ -80,13 +95,10 @@ function EventDescription({ event }: { event: typeof events[0] }) {
             alt={sponsor.name}
             width={48}
             height={48}
-            className="rounded bg-gray-100 p-1 object-contain"
+            className="rounded h-12 w-auto p-1 object-contain"
           />
         ))}
       </div>
-      <h2 className="text-2xl font-semibold">{event.title}</h2>
-      <p className="text-neutral-600 mb-1">{event.description}</p>
-      <span className="text-sm text-gray-500">{event.date}</span>
     </div>
   );
 }
@@ -126,32 +138,31 @@ function EventCard({ event }: { event: typeof events[0] }) {
 
 const events = [
   {
-    title: "Genome Sequencing Workshop",
-    description: "A beginner-friendly workshop introducing the fundamentals of genome sequencing. Highlights included hands-on DNA extraction and a Q&A with Dr. Smith.",
-    date: "Nov 12, 2024",
+    title: "BioHacks",
+    description: "BioHack 2025 brought students together to tackle real-world health challenges using data, machine learning, and statistical analysis—showcasing creativity, innovation, and impactful solutions through clear presentations and collaboration.",
+    date: "March, 2025",
     sponsors: [
-      // { name: "Genomics Inc.", logo: "/sponsors/genomics-inc.png" },
-      // { name: "BioLab", logo: "/sponsors/biolab.png" }
+      { name: "bioaro", logo: bioaro },
+      { name: "skorbio", logo: skorbio },
+      { name: "aimss", logo: aimss }
     ],
-    images: [sample, sample2, sample4]
+    images: [biohack1, biohack2, biohack3, biohack4, biohack5]
   },
   {
-    title: "Protein Folding Seminar",
-    description: "Explored the complexities of protein structure and prediction. Keynote by Prof. Lee and interactive folding simulations.",
-    date: "Oct 2, 2024",
-    sponsors: [
-      // { name: "ProteinX", logo: "/sponsors/proteinx.png" }
-    ],
-    images: [sample2, sample4, sample]
+    title: "Industry Night",
+    description: "Bioinformatics Industry Night featured expert panels, student networking, career advice, and dinner discussions on opportunities, trends, and ideas—bringing academia, start-ups, and industry closer to aspiring bioinformatics professionals.",
+    date: "Nov 2024",
+    sponsors: [],
+    images: [industry2, industry1, industry3]
   },
-  {
-    title: "AI in Biology Symposium",
-    description: "Showcased how machine learning is revolutionizing biological research. Panel discussion with AI experts and live demos.",
-    date: "Sep 18, 2024",
-    sponsors: [
-      // { name: "DeepBio", logo: "/sponsors/deepbio.png" },
-      // { name: "ML4Life", logo: "/sponsors/ml4life.png" }
-    ],
-    images: [sample4, sample, sample2]
-  }
+  // {
+  //   title: "AI in Biology Symposium",
+  //   description: "Showcased how machine learning is revolutionizing biological research. Panel discussion with AI experts and live demos.",
+  //   date: "Sep 18, 2024",
+  //   sponsors: [
+  //     // { name: "DeepBio", logo: "/sponsors/deepbio.png" },
+  //     // { name: "ML4Life", logo: "/sponsors/ml4life.png" }
+  //   ],
+  //   images: [sample4, sample, sample2]
+  // }
 ];

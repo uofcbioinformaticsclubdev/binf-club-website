@@ -36,7 +36,12 @@ function navbar() {
       `}
         >
 
-            <p>Logo</p>
+            <Link href="/">
+                <div className="flex">
+                    <img src={"./binf_logo.png"} className="h-10 w-auto ">
+                    </img>
+                </div>
+            </Link>
 
             <NavigationMenu>
                 <NavigationMenuList>
@@ -88,7 +93,7 @@ function navbar() {
                     {/* Events Section */}
                     <NavigationMenuItem>
                         {/* <NavigationMenuTrigger className="hide-nav-button-bg data-[state=open]:text-[#84cae7]">Events</NavigationMenuTrigger> */}
-                            {/* <ul className="grid w-[250px] gap-4">
+                        {/* <ul className="grid w-[250px] gap-4">
                                 <li>
                                     <NavigationMenuLink asChild>
                                         <Link href="/events/previous-events">Event News</Link>
@@ -98,9 +103,9 @@ function navbar() {
                                     </NavigationMenuLink>
                                 </li>
                             </ul> */}
-                            <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
-                                <Link href="/events/previous-events">Events</Link>
-                            </NavigationMenuLink>
+                        <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                            <Link href="/events/previous-events">Events</Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
 
 
