@@ -168,9 +168,7 @@ export default function Home() {
 
 
           <p className="text-lg text-gray-700 mt-6 leading-relaxed">
-            Living things carry their blueprint in molecules like DNA that dictate their characteristics and survival.
-            Bioinformatics is the science of decoding that information using computers.
-            It’s the bridge between biology and informatics.
+            Living organisms store complex information in the form of molecules, such as DNA, that dictate their characteristics and survival. Bioinformatics is the field concerned with deciphering the knowledge contained in these molecules–or biological information systems. This requires the use of computational tools, making bioinformatics the bridge between biology and informatics.
           </p>
 
 
