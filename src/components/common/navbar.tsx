@@ -8,6 +8,7 @@ import {
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
     NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link"
@@ -35,12 +36,22 @@ function navbar() {
       `}
         >
 
-            <p>Logo</p>
+            <Link href="/">
+                <div className="flex">
+                    <img src={"./binf_logo.png"} className="h-10 w-auto ">
+                    </img>
+                </div>
+            </Link>
 
             <NavigationMenu>
                 <NavigationMenuList>
+
+                    <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                        <Link href="/">Home</Link>
+                    </NavigationMenuLink>
+
                     {/* About Section */}
-                    <NavigationMenuItem>
+                    {/* <NavigationMenuItem>
                         <NavigationMenuTrigger
                             className="hide-nav-button-bg data-[state=open]:text-[#84cae7]"
                         >
@@ -59,18 +70,22 @@ function navbar() {
                                 </li>
                             </ul>
                         </NavigationMenuContent>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
 
 
                     {/* Learn Section */}
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger
+                        {/* <NavigationMenuTrigger
                             className="hide-nav-button-bg data-[state=open]:text-[#84cae7]"
                         >
                             Learn
-                        </NavigationMenuTrigger>
+                        </NavigationMenuTrigger> */}
 
-                        <NavigationMenuContent className="">
+                        <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                            <Link href="/learn/blog">Learn</Link>
+                        </NavigationMenuLink>
+
+                        {/* <NavigationMenuContent className="">
                             <ul className="grid w-[250px] gap-4">
                                 <li>
                                     <NavigationMenuLink asChild>
@@ -81,24 +96,25 @@ function navbar() {
                                     </NavigationMenuLink>
                                 </li>
                             </ul>
-                        </NavigationMenuContent>
+                        </NavigationMenuContent> */}
                     </NavigationMenuItem>
 
                     {/* Events Section */}
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className="hide-nav-button-bg data-[state=open]:text-[#84cae7]">Events</NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ul className="grid w-[250px] gap-4">
+                        {/* <NavigationMenuTrigger className="hide-nav-button-bg data-[state=open]:text-[#84cae7]">Events</NavigationMenuTrigger> */}
+                        {/* <ul className="grid w-[250px] gap-4">
                                 <li>
                                     <NavigationMenuLink asChild>
-                                        <Link href="/events/previous-events">Previous Events</Link>
+                                        <Link href="/events/previous-events">Event News</Link>
                                     </NavigationMenuLink>
                                     <NavigationMenuLink asChild>
                                         <Link href="/events/gallery">Gallery</Link>
                                     </NavigationMenuLink>
                                 </li>
-                            </ul>
-                        </NavigationMenuContent>
+                            </ul> */}
+                        <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                            <Link href="/events/previous-events">Events</Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
 
 
