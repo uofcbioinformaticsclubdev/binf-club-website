@@ -27,8 +27,8 @@ function footer(){
                         y2="-106.425"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stopColor="white" stopOpacity="0.07" />
-                        <stop offset="1" stopColor="white" stopOpacity="0" />
+                        <stop stop-color="white" stop-opacity="0.07" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -57,8 +57,8 @@ function footer(){
                         y2="88.5747"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stopColor="white" stopOpacity="0.07" />
-                        <stop offset="1" stopColor="white" stopOpacity="0" />
+                        <stop stop-color="white" stop-opacity="0.07" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -66,7 +66,7 @@ function footer(){
             <div className="overflow-hidden rounded bg-seagreen py-12 px-8 md:p-[60px] h-full w-full flex items-center justify-center">
               <div className="flex flex-wrap items-center md:pl-8 justify-center md:w-auto lg:w-[80%] xl:w-[60%]">
                 <div className="w-full px-2 lg:w-1/2">
-                  <h2 className="mb-6 text-2xl font-bold text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
+                  <h2 className="mb-6 text-3xl font-bold text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
                     <span className="xs:block">Can't get enough of us?</span>
                   </h2>
                 </div>
@@ -79,7 +79,7 @@ function footer(){
                       Become a Member!
                     </a>
 
-                    <div className="inline-flex gap-2">
+                    <div className="inline-flex gap-5">
                         <a
                           href="https://www.instagram.com/uofc_bioinformatics_club/?hl=en" target="_blank"
                           className="inline-flex p-3 my-1 text-base font-medium text-seagreen transition rounded-md bg-secondary hover:bg-opacity-90"
