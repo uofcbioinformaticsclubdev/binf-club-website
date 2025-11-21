@@ -25,7 +25,7 @@ export default function ContactPage() {
               <button type="submit" className="w-full py-2 font-semibold rounded bg-seagreen text-secondary">Submit</button>
             </form>
           </div>
-          <div className="flex items-center justify-center h-full xl:col-span-3">
+          <div className="flex items-center justify-center h-0 lg:h-full xl:col-span-3 invisible lg:visible">
             <img src="/students.jpg" alt="" className="object-cover h-3/5 w-auto rounded-md" />
           </div>
         </div>
