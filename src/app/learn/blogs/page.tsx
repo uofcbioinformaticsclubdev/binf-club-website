@@ -1,5 +1,3 @@
-// // Colour palette for the website
-// // Coolors : https://coolors.co/b0abd8-22aaa1-84cae7-fffdf1-2d3142 
 "use client";
 
 import { useState } from 'react';
@@ -61,7 +59,7 @@ export default function Blog() {
                         </h2>
                     </div>
                 </div>
-                <div className="pt-5 bg-[#fffdf1]">
+                <div className="pt-5 bg-gradient-to-b from-seagreen/5 to-transparent">
                     <div className='py-4 px-10 text-[#2B2C2C] font-semi-bold flex flex-row gap-6 justify-start'>
                         {tabs.map((tab) => (
                             <button

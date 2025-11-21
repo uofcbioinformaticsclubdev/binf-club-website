@@ -58,7 +58,7 @@ function footer(){
                         gradientUnits="userSpaceOnUse"
                       >
                         <stop stopColor="white" stopOpacity="0.07" />
-                        <stop offset="1" stop-color="white" stopOpacity="0" />
+                        <stop offset="1" stopColor="white" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
