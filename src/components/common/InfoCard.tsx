@@ -21,8 +21,8 @@ export default function InfoCard({
   return (
     <article
       className={`
-        relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8
-        w-full max-w-sm mx-auto transition-colors duration-700 ease-in-out sm:min-h-80 md:min-h-75 lg:min-h-90
+        relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 min-h-80
+        w-full max-w-sm mx-auto transition-colors duration-700 ease-in-out md:min-h-75 lg:min-h-90
         ${expanded ? "bg-[var(--color-seagreen)]" : ""}
       `}
       onClick={() => setExpanded(!expanded)} // Make whole card clickable

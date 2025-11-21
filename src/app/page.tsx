@@ -28,8 +28,8 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative w-full h-full min-h-full flex flex-col justify-center p-10 pt-20 z-10">
-          <p className="text-neutral-800 text-7xl font-extrabold uppercase out text-wr">Bioinformatics Club</p>
-          <p className="text-seagreen font-semibold text-3xl ">Turning Data Into Discoveries</p>
+          <p className="text-neutral-800 text-3xl md:text-7xl font-extrabold uppercase out text-wr">Bioinformatics Club</p>
+          <p className="text-seagreen font-semibold text-3xl md:text-xl">Turning Data Into Discoveries</p>
         </div>
       </div>
 
@@ -181,14 +181,14 @@ export default function Home() {
           </div>
 
 
-          <h2 className="text-4xl md:text-5xl pt-30 font-bold text-neutral-900">
+          <h2 className="text-4xl md:text-5xl pt-30 font-bold text-neutral-900 pb-5">
             Discover Your Impact
           </h2>
 
 
         </div>
         {/* Animated card section */}
-        <div className="w-full grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-3 p-32 pt-20 pb-3 ">
+        <div className="w-full grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-3 md:p-32 md:pt-20 md:pb-3 ">
           <InfoCard
             headline="Forensic Genomics"
             smallText="CSI"
@@ -212,7 +212,7 @@ export default function Home() {
           />
         </div>
         {/* New full-width InfoCards */}
-        <div className="w-full grid grid-cols-2 gap-3 px-32 pb-32">
+        <div className="w-full grid md:grid-cols-2 gap-3 pt-5 md:pt-0 md:px-32 md:pb-32">
           <InfoCard
             headline="Human Genome Project"
             smallText="Code of Life"
