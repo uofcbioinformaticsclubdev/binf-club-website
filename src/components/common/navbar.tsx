@@ -45,8 +45,13 @@ function navbar() {
 
             <NavigationMenu>
                 <NavigationMenuList>
+
+                    <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                        <Link href="/">Home</Link>
+                    </NavigationMenuLink>
+
                     {/* About Section */}
-                    <NavigationMenuItem>
+                    {/* <NavigationMenuItem>
                         <NavigationMenuTrigger
                             className="hide-nav-button-bg data-[state=open]:text-[#84cae7]"
                         >
@@ -59,24 +64,28 @@ function navbar() {
                                     <NavigationMenuLink asChild>
                                         <Link href="/about">About Bioinformatics Club</Link>
                                     </NavigationMenuLink>
-                                    {/* <NavigationMenuLink asChild>
+                                    <NavigationMenuLink asChild>
                                         <Link href="/about/team">Team</Link>
-                                    </NavigationMenuLink> */}
+                                    </NavigationMenuLink>
                                 </li>
                             </ul>
                         </NavigationMenuContent>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
 
 
                     {/* Learn Section */}
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger
+                        {/* <NavigationMenuTrigger
                             className="hide-nav-button-bg data-[state=open]:text-[#84cae7]"
                         >
                             Learn
-                        </NavigationMenuTrigger>
+                        </NavigationMenuTrigger> */}
 
-                        <NavigationMenuContent className="">
+                        <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
+                            <Link href="/learn/blog">Learn</Link>
+                        </NavigationMenuLink>
+
+                        {/* <NavigationMenuContent className="">
                             <ul className="grid w-[250px] gap-4">
                                 <li>
                                     <NavigationMenuLink asChild>
@@ -87,7 +96,7 @@ function navbar() {
                                     </NavigationMenuLink>
                                 </li>
                             </ul>
-                        </NavigationMenuContent>
+                        </NavigationMenuContent> */}
                     </NavigationMenuItem>
 
                     {/* Events Section */}

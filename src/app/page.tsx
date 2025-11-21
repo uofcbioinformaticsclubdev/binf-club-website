@@ -110,15 +110,6 @@ export default function Home() {
         </div>
       </section >
 
-      {/* Section divider */}
-      {/* <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-28 bg-neutral-50">
-        <path d="M0,60 C200,20 400,100 600,60 C800,20 1000,100 1200,60"
-          className="stroke-current text-seagreen/70"
-          fill="none" stroke-width="4" stroke-dasharray="2 12" opacity="0.6" />
-        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60"
-          className="stroke-current text-sky-400"
-          fill="none" stroke-width="4" stroke-dasharray="2 12" opacity="0.6" />
-      </svg> */}
 
       <section className="w-full flex justify-center items-center relative py-72 px-8">
         <div className="absolute inset-0 bg-neutral-50 -z-10">
@@ -190,34 +181,55 @@ export default function Home() {
               className="max-w-full h-auto sm:w-1/2 md:w-1/3 lg:w-1/2"
             />
           </div>
-          
+
+
+          <h2 className="text-4xl md:text-5xl pt-30 font-bold text-neutral-900">
+            Discover Your Impact
+          </h2>
 
 
         </div>
         {/* Animated card section */}
-        <div className="w-full grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-3 p-32 ">
-            <InfoCard
-              headline="Forensic Genomics" 
-              smallText="CSI" 
-              description="DNA sequencing and database matching for criminal justice — showing how bioinformatics impacts everyday law enforcement and identity verification."
-              image="https://images.unsplash.com/photo-1713950658643-b6882cc08e2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              imageDescription="A crime scene"
-            />
-            <InfoCard
-              headline="Vaccine Development" 
-              smallText="COVID-19 vaccines" 
-              description="Bioinformatics pipelines identify viral proteins and predict immune responses — enabling rapid vaccine design that changed the course of a pandemic."
-              image="https://plus.unsplash.com/premium_photo-1661440247844-f28df59bcc5b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              imageDescription="Covid Shots"
-            />
-            <InfoCard
-              headline="Agrigenomics" 
-              smallText="The cows are getting beefier" 
-              description="Applying bioinformatics to crop and livestock genomes — improving yield, disease resistance, and sustainability in agriculture."
-              image="https://images.unsplash.com/photo-1454179083322-198bb4daae41?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              imageDescription="cows, possibly after mooing"
-            />
-          </div>
+        <div className="w-full grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-3 p-32 pt-20 pb-3 ">
+          <InfoCard
+            headline="Forensic Genomics"
+            smallText="CSI"
+            description="DNA sequencing and database matching for criminal justice — showing how bioinformatics impacts everyday law enforcement and identity verification."
+            image="https://images.unsplash.com/photo-1713950658643-b6882cc08e2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imageDescription="A crime scene"
+          />
+          <InfoCard
+            headline="Vaccine Development"
+            smallText="COVID-19 vaccines"
+            description="Bioinformatics pipelines identify viral proteins and predict immune responses — enabling rapid vaccine design that changed the course of a pandemic."
+            image="https://plus.unsplash.com/premium_photo-1661440247844-f28df59bcc5b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imageDescription="Covid Shots"
+          />
+          <InfoCard
+            headline="Agrigenomics"
+            smallText="Beefier Cows"
+            description="Applying bioinformatics to crop and livestock genomes — improving yield, disease resistance, and sustainability in agriculture."
+            image="https://images.unsplash.com/photo-1454179083322-198bb4daae41?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imageDescription="cows, possibly after mooing"
+          />
+        </div>
+        {/* New full-width InfoCards */}
+        <div className="w-full grid grid-cols-2 gap-3 px-32 pb-32">
+          <InfoCard
+            headline="Human Genome Project"
+            smallText="Code of Life"
+            description="The first complete sequencing of human DNA — a landmark achievement in reading the composition of our genetic blueprint."
+            image="https://images.unsplash.com/photo-1631557674886-42edec9aacaa?q=80&w=1489&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imageDescription="Microarray of gene sequences"
+          />
+          <InfoCard
+            headline="AlphaFold"
+            smallText="Protein Prediction"
+            description="AlphaFold AI-powered protein structure prediction — solving one of biology’s hardest puzzles and accelerating drug discovery worldwide."
+            image="https://images.unsplash.com/photo-1707863080558-31e3e3e3ad86?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            imageDescription="Protein Structure"
+          />
+        </div>
       </section>
 
 
