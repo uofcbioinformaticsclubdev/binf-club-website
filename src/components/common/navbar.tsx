@@ -77,7 +77,7 @@ function navbar() {
                                         <Link href="/learn/whats-bioinformatics">What's Bioinformatics</Link>
                                     </NavigationMenuLink>
                                     <NavigationMenuLink asChild>
-                                        <Link href="/learn/blog">Blog</Link>
+                                        <Link href="/learn/blogs">Blogs</Link>
                                     </NavigationMenuLink>
                                 </li>
                             </ul>
