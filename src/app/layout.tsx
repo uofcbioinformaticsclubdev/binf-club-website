@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bioniformatics Club",
+  title: "Bioninformatics Club",
   description: "The bioinformatics club at the university of calgary",
 };
 
