@@ -14,9 +14,17 @@ import bioaro from "../../../../public/events-page/biohacks/bioaro.png";
 import skorbio from "../../../../public/events-page/biohacks/skorbio.png";
 import aimss from "../../../../public/events-page/biohacks/aimss.png";
 
-import industry1 from "../../../../public/events-page/industry-night/industry-1.jpg";
-import industry2 from "../../../../public/events-page/industry-night/industry-2.jpg";
-import industry3 from "../../../../public/events-page/industry-night/industry-3.jpg";
+import industry1_1 from "../../../../public/events-page/industry-night/industry-1.jpg";
+import industry1_2 from "../../../../public/events-page/industry-night/industry-2.jpg";
+import industry1_3 from "../../../../public/events-page/industry-night/industry-3.jpg";
+
+import industry2_1 from "../../../../public/events-page/industry-night/industry-2-1.jpg";
+import industry2_2 from "../../../../public/events-page/industry-night/industry-2-2.jpg";
+import industry2_3 from "../../../../public/events-page/industry-night/industry-2-3.jpg";
+import industry2_4 from "../../../../public/events-page/industry-night/industry-2-4.jpg";
+import industry2_5 from "../../../../public/events-page/industry-night/industry-2-5.jpg";
+import ASOC from "../../../../public/events-page/industry-night/ASOC_logo.png";
+import FreadSense from "../../../../public/events-page/industry-night/FreadSense.png";
 
 
 
@@ -89,14 +97,15 @@ function EventDescription({ event }: { event: typeof events[0] }) {
       {/* Sponsor Ribbon */}
       <div className="flex items-center gap-4 mb-2">
         {event.sponsors.map((sponsor, i) => (
-          <Image
-            key={i}
-            src={sponsor.logo}
-            alt={sponsor.name}
-            width={48}
-            height={48}
-            className="rounded h-12 w-auto p-1 object-contain"
-          />
+          <a key={i} href={sponsor.link || "#"} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={sponsor.logo}
+              alt={sponsor.name}
+              width={48}
+              height={48}
+              className="rounded h-12 w-auto p-1 object-contain"
+            />
+          </a>
         ))}
       </div>
     </div>
@@ -139,21 +148,31 @@ function EventCard({ event }: { event: typeof events[0] }) {
 const events = [
   {
     title: "BioHacks",
-    description: "BioHack 2025 brought students together to tackle real-world health challenges using data, machine learning, and statistical analysis—showcasing creativity, innovation, and impactful solutions through clear presentations and collaboration.",
+    description: "BioHack 2025 brought together students, mentors, and innovators to tackle real-world health challenges through data science, machine learning, and statistical analysis. Teams showcased creative, impactful solutions and shared thoughtful presentations that highlighted the power of computational approaches in healthcare. It was an inspiring, collaborative event that sparked new ideas and connections. Thank you to everyone who took part and helped make it a success!",
     date: "March, 2025",
     sponsors: [
-      { name: "bioaro", logo: bioaro },
-      { name: "skorbio", logo: skorbio },
-      { name: "aimss", logo: aimss }
+      { name: "bioaro", logo: bioaro, link: "https://bioaro.com/" },
+      { name: "skorbio", logo: skorbio, link: "https://skorbio.com/" },
+      { name: "aimss", logo: aimss, link: "https://www.aimss.ca/" }
     ],
     images: [biohack1, biohack2, biohack3, biohack4, biohack5]
   },
   {
-    title: "Industry Night",
+    title: "Industry Night '24",
     description: "Bioinformatics Industry Night featured expert panels, student networking, career advice, and dinner discussions on opportunities, trends, and ideas—bringing academia, start-ups, and industry closer to aspiring bioinformatics professionals.",
     date: "Nov 2024",
     sponsors: [],
-    images: [industry2, industry1, industry3]
+    images: [industry1_2, industry1_1, industry1_3]
+  },
+  {
+    title: "Industry Night '25",
+    description: "Our Industry 2025 was packed with speakers, students, and industry professionals coming together to discuss the state of the bioinformatics field, new insights and trends, and of course, plenty of networking. Over dinner, the event was an exciting and informative session that opened up new perspectives on different areas of bioinformatics across academia and industry. Thank you for all our members who attended and our esteemed panelists for sharing their views. Thank you so much to our sponsors ASOC and FREDsense!",
+    date: "Nov 2025",
+    sponsors: [
+      { name: "ASOC", logo: ASOC, link: "https://asoc.ucalgary.ca/" },
+      { name: "FreadSense", logo: FreadSense, link: "https://fredsense.com/" },
+    ],
+    images: [industry2_1, industry2_5, industry2_3, industry2_4, industry2_2]
   },
   // {
   //   title: "AI in Biology Symposium",
