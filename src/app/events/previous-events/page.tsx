@@ -104,6 +104,9 @@ function EventDescription({ event }: { event: typeof events[0] }) {
               width={48}
               height={48}
               className="rounded h-12 w-auto p-1 object-contain"
+              placeholder="blur"
+              unoptimized
+              loading="lazy"
             />
           </a>
         ))}
@@ -127,7 +130,9 @@ function EventCard({ event }: { event: typeof events[0] }) {
                     alt={event.title + ' image ' + (idx + 1)}
                     fill
                     className="object-cover"
-                    priority={idx === 0}
+                    placeholder="blur"
+                    loading="lazy"
+
                   />
                 </div>
               </CarouselItem>
@@ -148,7 +153,7 @@ function EventCard({ event }: { event: typeof events[0] }) {
 const events = [
   {
     title: "BioHacks",
-    description: "BioHack 2025 brought together students, mentors, and innovators to tackle real-world health challenges through data science, machine learning, and statistical analysis. Teams showcased creative, impactful solutions and shared thoughtful presentations that highlighted the power of computational approaches in healthcare. It was an inspiring, collaborative event that sparked new ideas and connections. Thank you to everyone who took part and helped make it a success!",
+    description: "BioHack 2025 brought together students, mentors, and innovators to tackle real-world health challenges through data science, machine learning, and statistical analysis. Teams showcased creative, impactful solutions and shared thoughtful presentations that highlighted the power of computational approaches in healthcare. It was an inspiring, collaborative event that sparked new ideas and connections. A special thank you to our participants and sponsors bioAro, SKORBIO and AIMSS!",
     date: "March, 2025",
     sponsors: [
       { name: "bioaro", logo: bioaro, link: "https://bioaro.com/" },
