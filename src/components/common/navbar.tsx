@@ -30,7 +30,7 @@ function navbar() {
         <nav
             className={`fixed w-full p-3 flex flex-row items-center justify-between z-50 transition-all duration-500
         ${scrolled
-                    ? "backdrop-blur-lg bg-cream/70 border-b border-gray-200"
+                    ? "backdrop-blur-lg bg-white/70 border-b border-gray-200"
                     : "bg-transparent border-transparent"
                 }
       `}
