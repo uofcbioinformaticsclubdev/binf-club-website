@@ -46,7 +46,7 @@ export default function Blog() {
     }
 
     return (
-        <div className="relative min-h-screen pt-14">
+        <div className="relative min-h-screen">
             <div className='flex flex-col justify-center items-center'>
                 <div className='relative w-full md:h-130'>
                     <ParticlesBackground />
