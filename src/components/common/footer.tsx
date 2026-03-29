@@ -28,6 +28,8 @@ function footer(){
                       >
                         <stop stopColor="white" stopOpacity="0.07" />
                         <stop offset="1" stopColor="white" stopOpacity="0" />
+                        <stop stopColor="white" stopOpacity="0.07" />
+                        <stop offset="1" stopColor="white" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -58,6 +60,8 @@ function footer(){
                       >
                         <stop stopColor="white" stopOpacity="0.07" />
                         <stop offset="1" stopColor="white" stopOpacity="0" />
+                        <stop stopColor="white" stopOpacity="0.07" />
+                        <stop offset="1" stopColor="white" stopOpacity="0" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -78,7 +82,7 @@ function footer(){
                       Become a Member!
                     </a>
 
-                    <div className="inline-flex gap-5">
+                    <div className="inline-flex gap-2">
                         <a
                           href="https://www.instagram.com/uofc_bioinformatics_club/?hl=en" target="_blank"
                           className="inline-flex p-3 my-1 text-base font-medium text-seagreen transition rounded-md bg-secondary hover:bg-opacity-90"
