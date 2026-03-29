@@ -82,7 +82,7 @@ function navbar() {
                         </NavigationMenuTrigger> */}
 
                         <NavigationMenuLink className="hide-nav-button-bg text-neutral-900 font-semibold data-[state=open]:text-[#84cae7]" asChild>
-                            <Link href="/learn/blog">Learn</Link>
+                            <Link href="/learn/blogs">Learn</Link>
                         </NavigationMenuLink>
 
                         {/* <NavigationMenuContent className="">
@@ -92,7 +92,7 @@ function navbar() {
                                         <Link href="/learn/whats-bioinformatics">What's Bioinformatics</Link>
                                     </NavigationMenuLink>
                                     <NavigationMenuLink asChild>
-                                        <Link href="/learn/blog">Blog</Link>
+                                        <Link href="/learn/blogs">Blogs</Link>
                                     </NavigationMenuLink>
                                 </li>
                             </ul>
